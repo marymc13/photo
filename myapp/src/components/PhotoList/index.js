@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../Modal';
 
 const PhotoList = ({ category }) => {
-  
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentPhoto, setCurrentPhoto] = useState();
 
@@ -114,7 +114,7 @@ const PhotoList = ({ category }) => {
       return (
         <div>
           {isModalOpen && (
-            <Modal onClose={toggleModal} currentPhoto={currentPhoto} />
+            <Modal currentPhoto={currentPhoto} onClose={toggleModal} />
           )}
           <div className="flex-row">
             {currentPhotos.map((image, i) => (
